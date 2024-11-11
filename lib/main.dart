@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pistachio_paradise/menu.dart';
+import 'package:pistachio_paradise/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple,).copyWith(secondary: Colors.deepPurple[400]),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue, // Warna biru utama
+        ).copyWith(
+          primary:
+              Colors.blue[100], // Biru yang lebih terang sebagai warna utama
+          secondary:
+              Colors.blue[50], // Biru pastel terang sebagai warna sekunder
+        ),
         useMaterial3: true,
       ),
       home: MyHomePage(),
