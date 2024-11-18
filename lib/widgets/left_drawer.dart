@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pistachio_paradise/screens/list_productentry.dart';
 import 'package:pistachio_paradise/screens/menu.dart';
 import 'package:pistachio_paradise/screens/productentry_form.dart';
 
@@ -27,11 +28,11 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(8)),
                 Text(
-                  "Ayo belanja product kebutuhan harianmu setiap hari di sini!",
+                  "Ayo jaga belanja produk harianmu setiap hari disini!",
                   textAlign: TextAlign.center, // Menambahkan center alignment
                   style: TextStyle(
                     fontSize: 15, // Menentukan ukuran font 15
-                    color: Colors.black, // Warna teks hitam
+                    color: Colors.black,
                     fontWeight: FontWeight.normal, // Mengatur weight menjadi normal
                   ),
                 ),
@@ -47,7 +48,7 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => MyHomePage(),
-                ),
+                )
               );
             },
           ),
@@ -64,6 +65,17 @@ class LeftDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+          leading: const Icon(Icons.add_reaction_rounded),
+          title: const Text('Daftar Product'),
+          onTap: () {
+              // Route menu ke halaman product
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+              );
+          },
+      ),
         ],
       ),
     );
